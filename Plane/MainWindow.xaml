@@ -1,0 +1,59 @@
+﻿<Window x:Class="Plane.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        Title="My Flight Briefcase" Height="650" Width="730">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid Height="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="43"/>
+                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="54"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Airline:" HorizontalAlignment="Left" Grid.Column="0" VerticalAlignment="Top" Height="26" Width="46"/>
+            <TextBox x:Name="AirlineNameBox" HorizontalAlignment="Left" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Flight:" HorizontalAlignment="Left" Grid.Column="2" VerticalAlignment="Top" Height="26" Width="48" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="AirlineFlightNumberBox" Height="23" Grid.Column="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="45"/>
+            <Label Content="Departing:" HorizontalAlignment="Left" Grid.Column="4" VerticalAlignment="Top" Height="26" Width="68" Grid.ColumnSpan="2" />
+            <TextBox x:Name="DepartureCityBox" Height="23"  Grid.Column="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="7,0" />
+            <Label Content="Arriving:" HorizontalAlignment="Left"  Grid.Column="6"  VerticalAlignment="Top"  Height="26" Width="54" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="ArrivalCityBox" HorizontalAlignment="Left"  Grid.Column="7" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47" />
+            <Button Content="Start Flight" IsDefault="True" HorizontalAlignment="Right"  Grid.Column="7"  Click="StartFlight_Click"  VerticalAlignment="Top" Width="75" Height="20" Margin="0,0,10,0" Grid.ColumnSpan="2"/>
+        </Grid>
+        <Label x:Name="FlightInfoBox" Content="Flight Information" HorizontalAlignment="Left" Height="29" Margin="10,41,-51,0" VerticalAlignment="Top" Width="733" Grid.ColumnSpan="2"/>
+        <m:Map x:Name="FlightMap" CredentialsProvider="Avlqj0AS9U01R4TruzJRi67-eAIPn7oDT8Z7Wv0TTCJ9IXK1U_hERc4GGjCT2wvS" ZoomLevel="5" Center="37.806, -122.407007" Grid.ColumnSpan="2" Margin="0,0,0,0" Grid.RowSpan="1" Grid.Row="1"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Light Icing" Click="LtIceClick"     HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Height="20" Margin="0,5,0,0" />
+            <Button Grid.Column="1" Content="Mod Icing"   Click="ModIceClick"    HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Height="20" Margin="0,5,0,0" />
+            <Button Grid.Column="2" Content="Hvy Icing"   Click="HvyIceClick"    HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Height="20" Margin="0,5,0,0" />
+            <Button Grid.Column="3" Content="Mod Turb"    Click="ModTurbClick"   HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Height="20" Margin="0,5,0,0" />
+            <Button Grid.Column="4" Content="Hvy Turb"    Click="HvyTurbClick"   HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Height="20" Margin="0,5,0,0" />
+            <Button Grid.Column="5" Content="T-Storm"     Click="TStrmClick"     HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Height="20" Margin="0,5,0,0" />
+            <Button Grid.Column="6" Content="Mod WndShr"  Click="ModShearClick"  HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Height="20" Margin="0,5,0,0" />
+            <Button Grid.Column="7" Content="Hvy WndShr"  Click="HvyShearClick"  HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Height="20" Margin="0,5,0,0" />
+            <Button Grid.Column="8" Content="Debug" Click="Button_Click"    HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Height="20" Margin="0,5,0,0" />
+        </Grid>
+    </Grid>
+</Window>
