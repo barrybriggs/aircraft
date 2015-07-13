@@ -99,7 +99,7 @@ namespace Plane
         static private string flight = "";
         static private string origin = "";
         static private string destination = "";
-        static private string bingKey = "Avlqj0AS9U01R4TruzJRi67-eAIPn7oDT8Z7Wv0TTCJ9IXK1U_hERc4GGjCT2wvS";
+        static private string bingKey = "YOUR BING MAP KEY HERE";
         static private Dictionary<string, string> airports = new Dictionary<string, string>(); 
 
         /* weather conditions */
